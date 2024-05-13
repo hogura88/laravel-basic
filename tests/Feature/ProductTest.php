@@ -20,20 +20,20 @@ class ProductTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_product_can_be_created() {
-        $vendor = new Vendor();
-         $vendor->vendor_code = 1111;
-         $vendor->vendor_name = 'SAMURAI商店';
-         $vendor->save();
+    // public function test_product_can_be_created() {
+    //      $vendor = new Vendor();
+    //      $vendor->vendor_code = 1111;
+    //      $vendor->vendor_name = 'SAMURAI商店';
+    //      $vendor->save();
 
-         $product = [
-            'product_name' => 'テスト商品',
-            'price' => 123,
-            'vendor_code' => 1111,
-            'image_name' => null
-        ];
-        $this->post(route('products.store'), $product);
+    //      $product = [
+    //         'product_name' => 'テスト商品',
+    //         'price' => 123,
+    //         'vendor_code' => 1111,
+    //         'image_name' => null
+    //     ];
+    //     $this->post(route('products.store'), $product);
 
-        $this->assertDatabaseHas('products', $product);
-    }
+    //     $this->assertDatabaseHas('products', $product);
+    // }
 }

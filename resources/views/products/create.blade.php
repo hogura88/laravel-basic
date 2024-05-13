@@ -20,7 +20,7 @@
          </div>
      @endif    
  
-     <form action="{{ route('products.store') }}" method="POST" enctype="multipart/from-data">
+     <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
          @csrf
          <table>
              <tr>
